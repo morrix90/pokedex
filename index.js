@@ -39,6 +39,7 @@ function createCard(pokemon) {
             </div>
         </div>
         <p class="card-stats-data"> Type: <span> ${pokemon.types[0].type.name} </span> </p>
+        <p>1</p>
     `;
 
     pokemonEl.innerHTML = pokemonCard;
