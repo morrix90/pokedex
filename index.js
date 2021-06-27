@@ -12,7 +12,7 @@ const getPokemon = async (id) => {
     const res = await fetch(url);
     const pokemon = await res.json();
     createCard(pokemon);
-
+    // search(pokemon)
     // console.log(pokemon);
 }
 
@@ -42,11 +42,18 @@ function createCard(pokemon) {
           `;
 
 
+<<<<<<< HEAD
+=======
+    const pokemonInfo = `
+        ${pokemon.id}
+`;
+>>>>>>> 2d4fed5ac1e8fbadc36bfa3594481496cba417fc
     pokemonEl.innerHTML = pokemonCard;
     pokemonContainer.appendChild(pokemonEl);
 
 }
 
+<<<<<<< HEAD
 async function pokeInfo() {
     let getPoke =  pokemonContainer.addEventListener('click', e => {
         let target = e.target;
@@ -58,3 +65,10 @@ async function pokeInfo() {
      console.log(pokemon)
 }
 pokeInfo()
+=======
+function search() {
+    const input = document.querySelector('.search-input');
+    const regExp = input.match("nahuel")
+    console.log(regExp)
+}
+>>>>>>> 2d4fed5ac1e8fbadc36bfa3594481496cba417fc
