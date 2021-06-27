@@ -12,7 +12,7 @@ const getPokemon = async (id) => {
     const res = await fetch(url);
     const pokemon = await res.json();
     createCard(pokemon);
-
+    // search(pokemon)
     // console.log(pokemon);
 }
 
@@ -52,9 +52,14 @@ function pokemonInfo(pokemon) {
 
     const pokemonInfo = `
         ${pokemon.id}
-
 `;
     pokemonEl.innerHTML = pokemonCard;
     pokemonContainer.appendChild(pokemonEl);
 
+}
+
+function search() {
+    const input = document.querySelector('.search-input');
+    const regExp = input.match("nahuel")
+    console.log(regExp)
 }
